@@ -2,7 +2,7 @@ from Caminho import Caminho
 from Grafo import Grafo
 from Populacao import Populacao
 
-grafo = Grafo('.\PCV\matriz500.txt')
+grafo = Grafo('.\matriz500.txt')
 grafo.mostraGrafo()
 tamanho_populacao = 9
 n_geracoes = 10

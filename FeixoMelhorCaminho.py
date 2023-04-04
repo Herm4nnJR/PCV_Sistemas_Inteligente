@@ -4,17 +4,17 @@ from Populacao import Populacao
 
 grafo = Grafo('.\matriz500.txt')
 grafo.mostraGrafo()
-tamanho_populacao = 9
-n_geracoes = 10
-visinhos_visitados = 5
-populacao = Populacao(tamanho_populacao, grafo, visinhos_visitados)
+tamanho_populacao = 50
+visinhos_visitados = 10
+nos_por_vez = 10
+populacao = Populacao(tamanho_populacao, grafo, visinhos_visitados, nos_por_vez)
 populacao.show_caminhos()
 print('\n')
 populacao.rank()
 populacao.show_caminhos()
-for i in range(n_geracoes-1) :
+while (populacao.get_tam_cam() < grafo.vertices) :
     print('\n')
-    populacao.novos_caminhos_mais_prox(tamanho_populacao,grafo,visinhos_visitados)
+    populacao.novos_caminhos_feixo(tamanho_populacao,grafo,visinhos_visitados, nos_por_vez)
     populacao.show_caminhos()
     print('\n')
     populacao.rank()
