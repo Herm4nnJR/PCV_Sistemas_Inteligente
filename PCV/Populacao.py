@@ -32,8 +32,7 @@ class Populacao:
     
     def novos_caminhos_mais_prox(self,tam_populacao,grafo,qntd_vizinhos_verif):
         #não mexer no melhor caminho
-        self.caminho[tam_populacao] = self.caminho[0]
-        for i in range(0,tam_populacao-1):
+        for i in range(1,tam_populacao-1):
             self.caminhos[i] = Caminho(grafo,qntd_vizinhos_verif)
             
     def novos_caminhos_feixo(self,tam_populacao, grafo, qntd_vizinhos_verif,qntd_nos_verif):
